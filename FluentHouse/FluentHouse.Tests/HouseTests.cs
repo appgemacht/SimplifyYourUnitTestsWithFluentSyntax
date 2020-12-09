@@ -4,7 +4,7 @@ using Xunit;
 
 namespace FluentHouse.Tests
 {
-    public class HouseFinderTests
+    public class HouseTests
     {
         [Fact]
         public void FindRoomForFriendsMeetup_WhenOnlyOneLargestRoomExist()
@@ -21,6 +21,6 @@ namespace FluentHouse.Tests
             // Assert
             level.Should().Be(1);
             roomName.Should().Be("Living Room");
-        } 
+        }
     }
 }
