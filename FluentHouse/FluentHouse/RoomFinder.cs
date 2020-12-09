@@ -11,7 +11,7 @@ namespace FluentHouse.Tests
             this.house = house;
         }
 
-        public (int level, string roomName) FindForFriendsMeetup()
+        public (int level, string roomName) FindRoomForFriendsMeetup()
         {
             throw new NotImplementedException();
         }

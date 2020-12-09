@@ -7,7 +7,7 @@ namespace FluentHouse.Tests
     public class HouseFinderTests
     {
         [Fact]
-        public void FindLargestRoom_WhenOnlyOneLargestRoomExist()
+        public void FindRoomForFriendsMeetup_WhenOnlyOneLargestRoomExist()
         {
             // Arrange
             House house = TestHouse.Create().WithFloors(
@@ -16,7 +16,7 @@ namespace FluentHouse.Tests
                 .WithGarage().WithPool().WithGarden();
 
             // Act
-            (int level, string roomName) = new RoomFinder(house).FindForFriendsMeetup();
+            (int level, string roomName) = new RoomFinder(house).FindRoomForFriendsMeetup();
 
             // Assert
             level.Should().Be(1);
