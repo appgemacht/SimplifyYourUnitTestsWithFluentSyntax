@@ -1,6 +1,7 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 
-namespace FluentHouse.Tests
+namespace FluentHouse.Tests.Extensions
 {
     public static class TestHouse
     {
@@ -32,19 +33,21 @@ namespace FluentHouse.Tests
             house.Garage = new Garage();
             return house;
         }
-    }
 
-    public static class TestFloor
-    {
-        public static Floor Create(int level)
+        public static House CreateSimpleHouse()
         {
-            return new Floor { Level = level };
+            return Create().WithFloors(TestFloor.Create(1).WithRoom(null, 20).WithRoom(null, 10).WithRoom(null, 5));
         }
 
-        public static Floor WithRoom(this Floor floor, string name, int size)
+        public static House CreateComplexHouse(int numberOfFloors, int roomsPerFloor)
         {
-            floor.Rooms.Add(new Room() { Name = name, Size = size });
-            return floor;
+            var floors = new List<Floor>();
+
+            for (int i = 0; i < numberOfFloors; i++)
+                floors.Add(TestFloor.Create(i).WithRooms(TestRooms.Create(roomsPerFloor).ToArray()));
+
+            return Create().WithFloors(floors.ToArray())
+                .WithGarage().WithPool().WithGarden();
         }
     }
 }
