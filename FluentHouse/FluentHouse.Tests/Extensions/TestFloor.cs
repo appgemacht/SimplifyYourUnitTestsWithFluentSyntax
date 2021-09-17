@@ -13,7 +13,7 @@
             return floor;
         }
 
-        public static Floor WithRoom(this Floor floor, string name = null, int? size = null) 
+        public static Floor WithRoom(this Floor floor, string name = null, int? size = null)
             => floor.WithRoom(TestRoom.Create(name, size));
 
         public static Floor WithRoom(this Floor floor, Room room)
