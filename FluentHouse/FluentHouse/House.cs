@@ -42,6 +42,19 @@ namespace FluentHouse
         public DateTime? CommentDate { get; set; }
     }
 
+    [Flags]
+    public enum RoomUsage
+    {
+        Bedroom = 1,
+        Living = 2,
+        Kitchen = 4,
+        Dining = 8,
+        Office = 16,
+        Entrance = 32,
+        Bath = 64,
+        Other = 128
+    }
+
     public class Garage
     {
     }
