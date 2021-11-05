@@ -15,16 +15,48 @@ namespace FluentHouse.Tests.Classic
             {
                 Floors = new[]
                 {
-                    new Floor { Level = 1, Rooms = new[]
+                    new Floor
                     {
-                        new Room("Kitchen", 10, 2, 4, 2, "Black", new DateTime(2009, 06, 01)),
-                        new Room("Living Room", 40, 1, 4, 0, "White", new DateTime(2020, 06, 01))
-                    }.ToList()},
-                    new Floor { Level = 2, Rooms = new[]
+                        Level = 1,
+                        Rooms = new[]
+                        {
+                            new Room("Kitchen",
+                                size: 10,
+                                roomNr: 2,
+                                numberOfWallSockets: 4,
+                                numberOfWaterSupplies: 2,
+                                color: "Black",
+                                renovatedDate: new DateTime(2009, 06, 01)),
+                            new Room("Living Room",
+                                size: 40,
+                                roomNr: 1,
+                                numberOfWallSockets: 4,
+                                numberOfWaterSupplies: 0,
+                                color: "White",
+                                renovatedDate: new DateTime(2020, 06, 01))
+                        }.ToList()
+                    },
+                    new Floor
                     {
-                        new Room("Bathroom", 5, 2, 2, 3, "Blue", new DateTime(2012, 06, 01)),
-                        new Room("Bedroom", 10, 23, 2, 0, "Green", new DateTime(2014, 06, 01))
-                    }.ToList()},
+                        Level = 2,
+                        Rooms = new[]
+                        {
+                            new Room("Bathroom",
+                                size: 5,
+                                roomNr: 2,
+                                numberOfWallSockets: 2,
+                                numberOfWaterSupplies: 3,
+                                color: "Blue",
+                                renovatedDate: new DateTime(2012, 06, 01)),
+                            new Room("Bedroom",
+                                size: 10,
+                                roomNr: 23,
+                                numberOfWallSockets: 2,
+                                numberOfWaterSupplies: 0,
+                                color: "Green",
+                                renovatedDate: new DateTime(2014, 06, 01))
+                        }.ToList()
+                    },
                 }.ToList(),
                 Garage = new Garage(),
                 Pool = new Pool(),
