@@ -62,7 +62,7 @@ namespace FluentHouse.Tests.Builders
             return new House { Floors = Floors, Garage = Garage, Garden = Garden, Pool = Pool };
         }
 
-        private List<Floor> Floors { get; set; }
+        private List<Floor> Floors { get; set; } = new List<Floor>();
         private Garage Garage { get; set; }
         private Garden Garden { get; set; }
         private Pool Pool { get; set; }
