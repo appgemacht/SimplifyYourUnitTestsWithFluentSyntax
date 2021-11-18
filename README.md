@@ -326,7 +326,7 @@ var foo = new TestFoo()
   * Validate parameter values and ensure the object is always consistent.
   * Make properties immutable if possible.
 * If your productive classes are only mutable bags with getters and setters, maybe named "DTOs":
-  * See [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html). Maybe
+  * See [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html).
   * Put more behaviour into your domain objects.
   * Prefer object-oriented over procedural style.
 * If refactoring your (legacy) productive classes takes too much time, you can create test helpers first
