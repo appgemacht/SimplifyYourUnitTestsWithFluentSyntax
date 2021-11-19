@@ -64,8 +64,8 @@ public void FindRoomForFriendsMeetup_WhenOnlyOneLargestRoomExist_ThenReturnLarge
 
 ## What do I mean with *"Fluent Syntax"*?
 * Also named as [Fluent interface](https://en.wikipedia.org/wiki/Fluent_interface)
-* An API using pattern like [method chaining](https://en.wikipedia.org/wiki/Method_chaining),
-  the [builder pattern](https://en.wikipedia.org/wiki/Builder_pattern),
+* An API using techniques like [method chaining](https://en.wikipedia.org/wiki/Method_chaining) and
+  the [builder pattern](https://en.wikipedia.org/wiki/Builder_pattern)
 * For example, each method returns `this` or some other context which can be used for subsequent method calls.
 * The goal is to write in natural human language or make the code more
   [domain-specific (DSL)](https://en.wikipedia.org/wiki/Domain-specific_language).
