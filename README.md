@@ -1,4 +1,4 @@
-Simplify.Your(Automated.Tests).With(Fluent.Syntax)
+Simplify.Your(Tests).With(Fluent.Syntax)
 ============================================
 
 This repo contains sample projects used in my new blog post
