@@ -1,8 +1,11 @@
 Simplify.Your(Tests).With(Fluent.Syntax)
 ============================================
 
-This repo contains sample projects used in my new blog post
-about using the Builder pattern in automated software tests.
+Learn how to write short, simple and maintainable
+automated software tests with a fluent interface/builder pattern.
+
+See the [.NET sample projects](https://github.com/appgemacht/SimplifyYourUnitTestsWithFluentSyntax/tree/main/FluentTests.Examples)
+on this GitHub repo to see fluent syntax in action.
 
 ## Example
 Classic:
