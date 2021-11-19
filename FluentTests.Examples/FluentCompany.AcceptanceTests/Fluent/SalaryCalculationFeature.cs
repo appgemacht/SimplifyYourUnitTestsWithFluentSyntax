@@ -21,7 +21,8 @@ namespace FluentCompany.AcceptanceTests.Fluent
                     .WithContract(TestEmployeeContract.For(company).Earning(30).Per(TimeSpan.FromHours(1))));
 
             "When the employee has worked November 2021"
-                .x(() => salary = SalaryCalculator.CalculateSalary(employee, DateTime.Parse("2021-11-01"), DateTime.Parse("2021-12-01")));
+                .x(() => salary = SalaryCalculator
+                    .CalculateSalary(employee, DateTime.Parse("2021-11-01"), DateTime.Parse("2021-12-01")));
 
             "Then his salary is "
                 .x(() => salary.Should().Be(5280));
