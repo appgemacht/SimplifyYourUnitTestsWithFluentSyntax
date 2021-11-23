@@ -11,10 +11,8 @@ namespace FluentHouse.Tests.Builders
         {
         }
 
-        public TestRoomBuilder(TestFloorBuilder parent)
-        {
-            _parent = parent;
-        }
+        public TestRoomBuilder(TestFloorBuilder parent) 
+            => _parent = parent;
 
         private string Name { get; set; }
         private int? Size { get; set; }
@@ -27,7 +25,14 @@ namespace FluentHouse.Tests.Builders
         private string Comment { get; set; }
         private DateTime? CommentDate { get; set; }
 
-        public TestRoomBuilder With(string name = null, int? size = null, int? roomNr = null, int? numberOfWallSockets = null, int? numberOfWaterSupplies = null, string color = null, DateTime? renovatedDate = null)
+        public TestRoomBuilder With(
+            string name = null,
+            int? size = null,
+            int? roomNr = null,
+            int? numberOfWallSockets = null,
+            int? numberOfWaterSupplies = null,
+            string color = null,
+            DateTime? renovatedDate = null)
         {
             Name = name ?? Name;
             Size = size ?? Size;

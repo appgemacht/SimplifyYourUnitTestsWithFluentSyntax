@@ -6,7 +6,14 @@ namespace FluentHouse.Tests.Extensions
     {
         private static readonly Random Random = new Random();
 
-        public static Room Create(string name = null, int? size = null, int? roomNr = null, int? numberOfWallSockets = null, int? numberOfWaterSupplies = null, string color = null, DateTime? renovatedDate = null)
+        public static Room Create(
+            string name = null,
+            int? size = null,
+            int? roomNr = null,
+            int? numberOfWallSockets = null,
+            int? numberOfWaterSupplies = null,
+            string color = null,
+            DateTime? renovatedDate = null)
         {
             return new Room(
                 name ?? GetRandomRoomName(),
