@@ -33,7 +33,7 @@ namespace FluentHouse.Tests.Builders
             return this;
         }
 
-        public TestFloorBuilder AddRoom(string name = null, int? size = null)
+        public TestFloorBuilder AddRoom(string name, int? size = null)
         {
             AddRoom(new TestRoomBuilder().With(name, size).Build());
             return this;

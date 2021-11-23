@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using System;
-using System.Linq;
 using Xbehave;
 
 namespace FluentCompany.AcceptanceTests.Fluent

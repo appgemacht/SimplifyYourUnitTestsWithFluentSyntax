@@ -1,5 +1,4 @@
-﻿using FluentFoo.Tests.Extensions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace FluentFoo.Tests.Builders
 {
