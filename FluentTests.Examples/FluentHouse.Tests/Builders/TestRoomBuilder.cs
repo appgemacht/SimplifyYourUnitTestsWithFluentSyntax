@@ -29,8 +29,13 @@ namespace FluentHouse.Tests.Builders
 
         public TestRoomBuilder With(string name = null, int? size = null, int? roomNr = null, int? numberOfWallSockets = null, int? numberOfWaterSupplies = null, string color = null, DateTime? renovatedDate = null)
         {
-            Name = name;
-            Size = size;
+            Name = name ?? Name;
+            Size = size ?? Size;
+            RoomNr = roomNr ?? RoomNr;
+            NumberOfWallSockets = numberOfWallSockets ?? NumberOfWallSockets;
+            NumberOfWaterSupplies ??= numberOfWaterSupplies ?? NumberOfWaterSupplies;
+            Color = color ?? Color;
+            RenovatedDate = renovatedDate ?? RenovatedDate;
             return this;
         }
 
