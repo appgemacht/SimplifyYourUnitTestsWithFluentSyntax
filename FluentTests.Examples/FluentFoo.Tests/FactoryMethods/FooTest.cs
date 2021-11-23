@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using System.Linq;
+using FluentAssertions;
 using Xunit;
 
 namespace FluentFoo.Tests.FactoryMethods
@@ -21,5 +22,21 @@ namespace FluentFoo.Tests.FactoryMethods
             testee.Property2.Should().Be(123);
             testee.Property3.Should().Be(345.67);
         }
+        
+        [Fact]
+        public void CreateFoo_UsingHelperInTestClass()
+        {
+            // Arrange
+            // Act
+            var testee = CreateFoo("ABC");
+            
+            // Assert
+            testee.Property1.Should().Be("ABC");
+        }
+
+        private static Foo CreateFoo(string property1 = "Foo", int property2 = 1234, double property3 = 12.34) 
+            => new Foo(property1, property2, property3) { Bars = new[] { CreateBar() }.ToList() };
+
+        private static Bar CreateBar(string property1 = null) => new Bar(property1 ?? "Bar");
     }
 }

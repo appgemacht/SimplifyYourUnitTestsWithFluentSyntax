@@ -15,6 +15,6 @@ namespace FluentFoo
         public string Property1 { get; set; }
         public int Property2 { get; set; }
         public double Property3 { get; set; }
-        public List<Bar> Bars { get; set; } = new List<Bar>();
+        public List<Bar> Bars { get; set; } = new();
     }
 }
