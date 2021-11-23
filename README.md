@@ -84,7 +84,7 @@ What it means for automated software tests:
   * All visible values or method calls are necessary and should influence the execution path being tested.
   * Everything else will make the tests noisy and hard to understand.
   (e.g. `roomNr`, `renovatedDate`)
-  * BUT: Do not hide any values, that are important to the test (e.g. ``level: GetLevel()``)
+  * BUT: Do not hide any values, that are important for the test (e.g. ``level: GetLevel()``)
 
 ## Advantages of Fluent Syntax
 * Usage of the productive code can be different in tests, because you need to mock/fake some dependencies.
