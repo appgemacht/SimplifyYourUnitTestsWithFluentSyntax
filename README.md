@@ -1,5 +1,5 @@
 Simplify.Your(Tests).With(Fluent.Syntax)
-============================================
+=========================================
 
 Learn how to write short, simple and maintainable
 automated software tests with a fluent interface/builder pattern.
