@@ -7,7 +7,8 @@ namespace FluentFoo.Tests.FactoryMethods
     public class FooTest
     {
         [Fact]
-        public void CreateFoo_WithAllProperties()
+        // using test helper
+        public void CreateFoo_WithAllPropertiesAndOneBar()
         {
             // Arrange
             var bar = TestBar.Create("Bar");
@@ -24,7 +25,8 @@ namespace FluentFoo.Tests.FactoryMethods
         }
         
         [Fact]
-        public void CreateFoo_UsingHelperInTestClass()
+        // using helper method in test class
+        public void CreateFoo_WithOneProperty()
         {
             // Arrange
             // Act
